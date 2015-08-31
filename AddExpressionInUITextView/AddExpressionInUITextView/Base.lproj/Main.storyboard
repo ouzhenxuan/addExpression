@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPm-GD-G83">
+                                <rect key="frame" x="50" y="46" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ieE-wb-ieS"/>
+                                    <constraint firstAttribute="width" constant="97" id="zZ1-dJ-Pe0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUi-lK-G65">
+                                <rect key="frame" x="16" y="94" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.69277875649999998" blue="0.30785498839999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="yHb-vu-7rP"/>
+                                    <constraint firstAttribute="height" constant="128" id="zFZ-jj-H2S"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oh7-Jb-2AQ">
+                                <rect key="frame" x="160" y="45" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="CR5-dq-WZx"/>
+                                    <constraint firstAttribute="height" constant="30" id="jrK-lG-Z74"/>
+                                </constraints>
+                                <state key="normal" title="SHOW">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showTextToTextView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="O9O-F7-MHC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZu-Ov-2Sk">
+                                <rect key="frame" x="248" y="46" width="32" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Jer-df-mbV"/>
+                                    <constraint firstAttribute="height" constant="30" id="Sss-Kg-puM"/>
+                                </constraints>
+                                <state key="normal" image="smile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addImageToText:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ToX-fI-KqU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiC-h0-T9h">
+                                <rect key="frame" x="16" y="258" width="214" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="08V-CZ-Yl6"/>
+                                    <constraint firstAttribute="width" constant="214" id="QzY-9h-ks0"/>
+                                </constraints>
+                                <state key="normal" title="将@开头：结尾的文字变红">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changcolor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oyp-81-8s4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bZu-Ov-2Sk" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="26" id="Bmd-fS-ZQP"/>
+                            <constraint firstItem="oh7-Jb-2AQ" firstAttribute="leading" secondItem="MPm-GD-G83" secondAttribute="trailing" constant="13" id="CdM-i7-rSR"/>
+                            <constraint firstItem="GiC-h0-T9h" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="KeY-u1-ZIt"/>
+                            <constraint firstItem="DUi-lK-G65" firstAttribute="top" secondItem="MPm-GD-G83" secondAttribute="bottom" constant="18" id="MiA-rs-5nO"/>
+                            <constraint firstItem="MPm-GD-G83" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="50" id="OT5-Sa-IAs"/>
+                            <constraint firstItem="GiC-h0-T9h" firstAttribute="top" secondItem="DUi-lK-G65" secondAttribute="bottom" constant="36" id="YS1-gk-CND"/>
+                            <constraint firstItem="DUi-lK-G65" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="bmz-Id-HBz"/>
+                            <constraint firstItem="MPm-GD-G83" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="26" id="hdp-uA-1tI"/>
+                            <constraint firstItem="oh7-Jb-2AQ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="25" id="oWa-XQ-Yv2"/>
+                            <constraint firstItem="bZu-Ov-2Sk" firstAttribute="leading" secondItem="oh7-Jb-2AQ" secondAttribute="trailing" constant="8" id="wvN-YZ-aeq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="showTextView" destination="DUi-lK-G65" id="cqD-id-7t8"/>
+                        <outlet property="textFeild" destination="MPm-GD-G83" id="RMw-X1-6La"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="202"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="smile" width="32" height="31"/>
+    </resources>
+</document>
